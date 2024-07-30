@@ -24,6 +24,13 @@ class LinkedList {
     }
   }
 
+  addAtFront(newData) {
+    let newNode = new Node(newData);
+    newNode.next = this.head
+    this.head = newNode;
+    
+  }
+
   traverse() {
     let current = this.head;
 
@@ -38,5 +45,5 @@ let list = new LinkedList();
 list.add(1);
 list.add(2);
 list.add(3);
-
+list.addAtFront(7)
 list.traverse();
